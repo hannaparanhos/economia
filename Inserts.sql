@@ -1,0 +1,2 @@
+INSERT INTO `funcionarios` (`id`, `nome`, `foto`) VALUES (NULL, 'Rosa Maria ', NULL), (NULL, 'Fabio Moreira', NULL), (NULL, 'Rafaela Morais', NULL), (NULL, 'Maria Luiza', NULL), (NULL, 'Vinicius Cardoso', NULL), (NULL, 'Lucas Ribeiro', NULL), (NULL, 'Carla Costa', NULL), (NULL, 'Marcelo Quadros', NULL), (NULL, 'Luiza Meireles', NULL), (NULL, 'Mateus Souza', NULL);
+INSERT INTO `tipo_projeto` (`id`, `tipo`) VALUES (NULL, 'Aplicativo'), (NULL, 'Aplicação Web'), (NULL, 'Site'), (NULL, 'Sistema');
