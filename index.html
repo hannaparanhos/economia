@@ -62,53 +62,171 @@
         <div class="col-md-12">
           <!-- Tabs with icons on Card -->
           <div class="card card-nav-tabs">
+            <form>
             <div class="card-header card-header-primary">
               <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
               <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
-                  <ul class="nav nav-tabs" data-tabs="tabs">
+                  <ul class="nav nav-tabs mx-auto"  data-tabs="tabs">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#profile" data-toggle="tab">
-                        <i class="material-icons">face</i> Profile
+                      <a class="nav-link active" href="#projeto" data-toggle="tab">
+                        <i class="material-icons">build</i> Projeto
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#messages" data-toggle="tab">
-                        <i class="material-icons">chat</i> Messages
+                      <a class="nav-link" href="#requisitos" data-toggle="tab">
+                        <i class="material-icons">dashboard</i> Requisitos
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#settings" data-toggle="tab">
-                        <i class="material-icons">build</i> Settings
+                      <a class="nav-link" href="#enviar" data-toggle="tab">
+                        <i class="material-icons">email</i> Enviar
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
+
+
             <div class="card-body py-5">
-              <div class="tab-content text-center">
-                <div class="tab-pane active" id="profile">
-                  <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the
-                    answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have,
-                    to push possibilities, to show people, this is the level that things could be at. I think
-                    that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level
-                    that things could be at. </p>
+              <div class="tab-content">
+                <div class="tab-pane active" id="projeto">
+                  
+                  <div class="row">
+                    <div class="col-md-4">
+                       <p> Tipo de Projeto</p>
+                      <div class="form-group text-left">
+
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="TipoAplicacaoWeb" value="option1"> Aplicação Web
+                            <span class="circle">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="TipoSite" value="option2" checked> Site
+                            <span class="circle">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      
+                       <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="TipoAplicativo" value="option2" checked> Aplicativo
+                            <span class="circle">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="TipoSistemma" value="option2" checked> Sistema
+                            <span class="circle">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                       <p> Orçamento</p>
+                     
+                      <div class="form-group text-left">
+                       
+                        <label for="orcamento" class="bmd-label-floating">Quanto está disposto a pagar ?</label>
+                        <input type="text" class="form-control" id="orcamento">
+
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="form-group text-left">
+
+                          <label for="datainicio" class="bmd-label-floating">Data de Início</label>
+                          <input type="date" class="form-control" id="datainicio">
+
+                          <br><br>
+
+                          <label for="datafinal" class="bmd-label-floating">Data Final</label>
+                          <input type="date" class="form-control" id="datafinal">
+
+
+                      </div>
+                    </div>
+                  </div>
+                       
+                      
+                 
                 </div>
-                <div class="tab-pane" id="messages">
-                  <p> I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is
-                    the level that things could be at. I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think
-                    that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level
-                    that things could be at.</p>
+
+
+
+                <div class="tab-pane" id="requisitos">
+                   <div class="row">
+
+                    <div class="col-md-3">
+                       <p> Requisitos Funcionais Básicos</p>
+                      <div class="form-group text-left">
+
+                        <input type="text" class="form-control" id="rbasico">
+                        
+                      </div>
+                    </div>
+
+                   <div class="col-md-3">
+                       <p> Requisitos Funcionais Intermediários</p>
+                      <div class="form-group text-left">
+
+                        <input type="text" class="form-control" id="rinter">
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                       <p> Requisitos Funcionais Avançados</p>
+                      <div class="form-group text-left">
+
+                        <input type="text" class="form-control" id="ravancado">
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                       <p> Requisitos Não Funcionais</p>
+                      <div class="form-group text-left">
+
+                        <input type="text" class="form-control" id="rnaofuncional">
+                        
+                      </div>
+                    </div>
                 </div>
-                <div class="tab-pane" id="settings">
-                  <p>I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is
-                    the level that things could be at. So when you get something that has the name Kanye West on it,
-                    it&#x2019;s supposed to be pushing the furthest possibilities. I will be the leader of a company
-                    that ends up being worth billions of dollars, because I got the answers. I understand culture. I am
-                    the nucleus.</p>
+            </div>
+
+
+                <div class="tab-pane" id="enviar">
+                   <div class="row">
+
+                  <div class="form-group text-center">
+
+                        <button type="Submit" class="btn btn-primary btn-lg">Submit</button>
+                        
+                        
+                      </div>
+
+                  </div>
                 </div>
+
+
+                </div>
+              </form>
               </div>
             </div>
           </div>
