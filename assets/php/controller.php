@@ -92,7 +92,4 @@ if (isset($_POST['computar'])) {
 
 }
 
-
-
-
 ?>
