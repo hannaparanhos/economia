@@ -1,8 +1,5 @@
 <?php
-
-if (isset($_POST['computar'])) {
-  var_dump($_POST);
-}
+require_once 'assets/php/controller.php';
 
 ?>
 
@@ -27,7 +24,7 @@ if (isset($_POST['computar'])) {
   <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+        <a class="navbar-brand" href="index.php">
           GROP </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -38,11 +35,11 @@ if (isset($_POST['computar'])) {
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="material-icons">apps</i> Template
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -141,12 +138,12 @@ if (isset($_POST['computar'])) {
                         <div class="form-group text-left">
 
                           <label for="datainicio" class="bmd-label-floating">Data de Início</label>
-                          <input type="date" class="form-control" name="datainicio">
+                          <input type="date" class="form-control" name="data_inicio">
 
                           <br>
                           <br>
                          <label for="datafinal" class="bmd-label-floating">Data Final</label>
-                            <input type="date" class="form-control" name="datafinal">
+                            <input type="date" class="form-control" name="data_final">
                         </div>
                       </div>
                     </div>
@@ -156,25 +153,25 @@ if (isset($_POST['computar'])) {
                       <div class="col-md-3">
                         <p> Requisitos Funcionais Básicos</p>
                         <div class="form-group text-left">
-                          <input type="text" class="form-control" name="rbasico">
+                          <input type="text" class="form-control" name="requisito1">
                         </div>
                       </div>
                       <div class="col-md-3">
                         <p> Requisitos Funcionais Intermediários</p>
                         <div class="form-group text-left">
-                          <input type="text" class="form-control" name="rinter">
+                          <input type="text" class="form-control" name="requisito2">
                         </div>
                       </div>
                       <div class="col-md-3">
                         <p> Requisitos Funcionais Avançados</p>
                         <div class="form-group text-left">
-                          <input type="text" class="form-control" name="ravancado">
+                          <input type="text" class="form-control" name="requisito3">
                         </div>
                       </div>
                       <div class="col-md-3">
                         <p> Requisitos Não Funcionais</p>
                         <div class="form-group text-left">
-                          <input type="text" class="form-control" name="rnaofuncional">
+                          <input type="text" class="form-control" name="requisito_no_f">
                         </div>
                       </div>
                     </div>
