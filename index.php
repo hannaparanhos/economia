@@ -44,7 +44,7 @@ require_once 'assets/php/controller.php';
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/bg3.jpg')">
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/capagrop.jpg')">
     <div class="container">
       <div class="row">
         <div class="col-md-12 ml-auto mr-auto">
@@ -179,7 +179,7 @@ require_once 'assets/php/controller.php';
                   <div class="tab-pane" id="enviar">
                     <div class="row">
                       <div class="form-group text-center">
-                        <button type="submit" class="btn btn-primary btn-lg" name="computar">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-lg" name="computar">Enviar</button>
                       </div>
                     </div>
                   </div>

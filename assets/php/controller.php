@@ -1,12 +1,13 @@
 <?php 
 include_once 'precos.php';
-
+include_once 'class/queryClasses.php';
 
 if (isset($_POST['computar'])) {
 
+    $query = new Query();
+
     $servico = $precos[$_POST['tipo_servico']];
 
-    $tempo           = $servico['tempo_max'];
     $tempoInicio     = new DateTime($_POST['data_inicio']);
     $tempoFinal      = new DateTime($_POST['data_final']);
     $tempoSolicitado = $tempoInicio->diff($tempoFinal)->format('%a');
@@ -25,6 +26,12 @@ if (isset($_POST['computar'])) {
 
     $orcamentoSolicitado = $_POST['orcamento'];
     $orcamento           = array_sum($requisitosTotal);
+
+    $tempoMin = $servico['tempo'] * $orcamento;
+
+
+    var_dump($orcamento);
+    var_dump($tempoMin);
 
     $squad = array();
 
@@ -85,10 +92,20 @@ if (isset($_POST['computar'])) {
                 "Gerência" => 1,
                 "HTML" => 0,
                 "CSS" => 0,
-                "ReactNative" => 3
+                "ReactNative" => 2
             );
             break;
     }
+
+    $habilidadesFinal = array();
+
+    foreach($squad as $key => $s){
+        if($s >= 1){
+            array_push($habilidadesFinal, $query->getPessoasPorHabilidade(array(":habilidade" => $key)));
+        }
+    }
+
+    var_dump($habilidadesFinal);
 
 }
 
