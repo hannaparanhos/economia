@@ -139,11 +139,12 @@ if (isset($_POST['computar'])) {
             }else{
                 // não possuimos equipe, mas temos um tempo mais curto => Problema 2
                 array_push($problema, 2);
+                $_SESSION['nova_data'] = $tempoMin;
             }
         }else{
             // possui prazo inferior a margem de 5% => Problema 2
             array_push($problema, 2);
-        
+            $_SESSION['nova_data'] = $tempoMin;
         }
 
     }elseif($orcamentoSolicitado > $orcamentoMargem){
@@ -161,6 +162,7 @@ if (isset($_POST['computar'])) {
                 // se não existe equipe e orcamento esta na margem de 5% mesmo com prazo ok => Problema 1 e 3
 
                 array_push($problema, 1);
+                $_SESSION['novo_orcamento'] = $orcamento;
                 array_push($problema, 3);
             }
 
@@ -170,17 +172,22 @@ if (isset($_POST['computar'])) {
 
             array_push($problema, 1);
             array_push($problema, 2);
+            $_SESSION['nova_data'] = $tempoMin;
+            $_SESSION['novo_orcamento'] = $orcamento;
 
         }else{
             // possui prazo inferior a margem de 5% e prazo inferior a 5% => Problema 1 e 2
 
             array_push($problema, 1);
             array_push($problema, 2);
+            $_SESSION['nova_data'] = $tempoMin;
+            $_SESSION['novo_orcamento'] = $orcamento;
 
         }
 
     }else{  // orcamento abaixo da margem de 5%
         array_push($problema, 1);
+        $_SESSION['novo_orcamento'] = $orcamento;
     }
 
 }

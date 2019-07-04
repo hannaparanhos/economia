@@ -27,7 +27,7 @@ class Query{
                   FROM funcionarios_has_habilidades h, funcionarios f, habilidades hb
                   WHERE f.id = h.funcionarios_id AND hb.id = h.habilidades_id AND hb.nome = :habilidade
                   AND f.id NOT IN (SELECT ff.funcionarios_idf FROM projetos_has_funcionarios ff, projetos pp WHERE pp.idprojetos = ff.projetos_id 
-                  AND (pp.inicio NOT BETWEEN :data_inicio AND :data_fim OR pp.fim NOT BETWEEN :data_inicio AND :data_fim));";
+                  AND (pp.inicio BETWEEN :data_inicio AND :data_fim OR pp.fim BETWEEN :data_inicio AND :data_fim));";
         $stmt = $this->connection->prepare($query);
         $stmt->execute($dados);
         return $stmt->fetchAll(PDO::FETCH_OBJ);

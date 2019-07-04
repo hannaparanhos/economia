@@ -28,7 +28,7 @@ $pro = array(
         <br>
         Tente aumentar o seu orcamento e prazo e realize novamente o GROP.
       </div>'
-)
+);
 ?>
 
 <!doctype html>
@@ -107,7 +107,14 @@ $pro = array(
                 <div class="tab-content tab-space">
                   <? foreach ($problema as $p) {
                     echo explode('@', $pro[$p])[1];
-                  } ?>
+                  } 
+                  if(isset($_SESSION['nova_data'])){
+                    echo "O prazo mínimo para esse tipo de projeto com esses níveis de requisitos é de : " . $_SESSION['nova_data'] . " dias";
+                  }
+                  if(isset($_SESSION['novo_orcamento'])){
+                    echo "O orçamento mínimo para um projeto desse porte é de R$ " . $_SESSION['novo_orcamento'];
+                  }
+                  ?>
                 </div>
               </div>
             </div>
