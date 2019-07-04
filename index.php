@@ -1,9 +1,3 @@
-<?php
-require_once 'assets/php/controller.php';
-
-?>
-
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -86,7 +80,7 @@ require_once 'assets/php/controller.php';
               </div>
             </div>
             <div class="card-body py-5">
-              <form action="index.php" method="post">
+              <form action="relatorio.php" method="post">
                 <div class="tab-content">
                   <div class="tab-pane active" id="projeto">
                     <div class="row">

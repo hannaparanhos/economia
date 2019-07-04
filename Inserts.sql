@@ -2,3 +2,6 @@ INSERT INTO `funcionarios` (`id`, `nome`, `foto`) VALUES (NULL, 'Rosa Maria ', N
 INSERT INTO `tipo_projeto` (`id`, `tipo`) VALUES (NULL, 'Aplicativo'), (NULL, 'Aplicação Web'), (NULL, 'Site'), (NULL, 'Sistema');
 INSERT INTO `habilidades` (`id`, `nome`) VALUES (NULL, 'PHP'), (NULL, 'MySql'), (NULL, 'Java'), (NULL, 'JavaScript'), (NULL, 'Design'), (NULL, 'Infraestrutura'), (NULL, 'Gerência'), (NULL, 'HTML'), (NULL, 'CSS'), (NULL, 'ReactNative');
 INSERT INTO `funcionarios_has_habilidades` (`funcionarios_id`, `habilidades_id`, `nivel`) VALUES ('1', '1', '3'), ('1', '2', '2'), ('2', '3', '2'), ('2', '5', '1'), ('3', '5', '3'), ('3', '7', '3'), ('4', '6', '1'), ('4', '7', '1'), ('5', '10', '3'), ('5', '4', '1'), ('6', '8', '3'), ('6', '1', '3'), ('7', '9', '3'), ('7', '7', '1'), ('8', '6', '2'), ('8', '5', '2'), ('9', '3', '3'), ('9', '10', '3'), ('10', '2', '3'), ('10', '3', '3');
+
+INSERT INTO `bdeconomia`.`funcionarios_has_habilidades` (`funcionarios_id`, `habilidades_id`, `nivel`) VALUES ('3', '9', '2');
+INSERT INTO `bdeconomia`.`funcionarios_has_habilidades` (`funcionarios_id`, `habilidades_id`, `nivel`) VALUES ('4', '9', '1');
